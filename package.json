@@ -1,0 +1,23 @@
+{
+  "name": "wsr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edelBCS/WSR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edelBCS/WSR/issues"
+  },
+  "homepage": "https://github.com/edelBCS/WSR#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mdbootstrap": "^4.13.0"
+  }
+}
