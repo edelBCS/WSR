@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Weekly Status Report</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+</head>
+
+<body>
+
+    <!-- Start your project here-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <a class="navbar-brand" href="#">WSR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Dashboard<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="submit-status.html">Submit Status</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-2">
+            <div class="container mt-3">
+                <h4>Sites/Systems</h4>
+                <ul class="list-group">
+                    <li class="list-group-item active">Test Site 1(TS1)</li>
+                    <li class="list-group-item">Test Site 2(TS2)</li>
+                    <li class="list-group-item">Test Site 3(TS3)</li>
+                    <li class="list-group-item">Test Site 4(TS4)</li>
+                    <li class="list-group-item">Test Site 5(TS5)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-10 mt-4">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <h3>Weekly Status Summary - Test Site 1</h3>
+
+                    <!-- POAM Status -->
+                    <canvas id="horizontalBar"></canvas>
+
+                    <!-- AR/ATO Status -->
+                    <form class="col-8 mb-5">
+                        <hr class="mb-3" style="width: 80%;">
+                        <h4 class="text-center">AR/ATO Status</h4>
+
+                        <div class="form-group shadow-textarea">
+                            <label for="exampleFormControlTextarea6"></label>
+                            <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                                placeholder="Enter status summary here...">Something Happened with the ATO Status this week.  Blah Blah Blah.</textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                            <label class="form-check-label" for="materialUnchecked">No Changes/Updates to AR/ATO
+                                Status</label>
+                        </div>
+                    </form>
+
+                    <!-- RA Status -->
+                    <form class="col-8 mb-5">
+                        <hr class="mb-3" style="width: 80%;">
+                        <h4 class="text-center">Risk Assessment Status</h4>
+
+                        <div class="form-group shadow-textarea">
+                            <label for="exampleFormControlTextarea6"></label>
+                            <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                                placeholder="Enter Risk Assessment status updates here...">N/A</textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                            <label class="form-check-label" for="materialUnchecked" aria-checked="true">No Changes/Updates to RA
+                                Status</label>
+                        </div>
+                    </form>
+
+                    <!-- Issues and Concerns -->
+                    <form class="col-8 mb-5">
+                        <hr class="mb-3" style="width: 80%;">
+                        <h4 class="text-center">Issues and Concerns</h4>
+
+                        <div class="form-group shadow-textarea">
+                            <label for="exampleFormControlTextarea6"></label>
+                            <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                                placeholder="Enter any additionals issues and/or concerns for this site/system...">Need to look at blah blah blah.  Waiting for feedback yada yada yada.</textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                            <label class="form-check-label" for="materialUnchecked">No Additonal Issues and/or
+                                Concerns</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End your project here-->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js">
+    </script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript">
+        new Chart(document.getElementById("horizontalBar"), {
+            "type": "horizontalBar",
+            "data": {
+                "labels": ["Red POAM Count", "Yellow POAM Count", "Green POAM Count"],
+                "datasets": [{
+                    "label": "Curent Red POAM Couts",
+                    "data": [33, 55, 86],
+                    "fill": false,
+                    "backgroundColor": ["rgba(255, 99, 132, 0.2)",
+                        "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)"
+                    ],
+                    "borderColor": ["rgb(255, 99, 132)", "rgb(255, 205, 86)",
+                        "rgb(75, 192, 192)"
+                    ],
+                    "borderWidth": 1
+                }]
+            },
+            "options": {
+                "scales": {
+                    "xAxes": [{
+                        "ticks": {
+                            "beginAtZero": true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
